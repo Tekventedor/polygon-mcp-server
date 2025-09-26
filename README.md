@@ -31,6 +31,15 @@ cp .env.example .env
 
 Get your free API key from [Polygon.io](https://polygon.io/dashboard/api-keys)
 
+## Two Server Implementations
+
+This repository provides two different MCP server implementations:
+
+1. **`server.py`** - Uses the official MCP Python SDK (recommended)
+2. **`server_fastmcp.py`** - Uses the FastMCP framework (alternative)
+
+Both servers provide identical functionality, choose based on your preference.
+
 ## Configuration for Claude Desktop
 
 Add this to your Claude Desktop config file:
@@ -38,12 +47,28 @@ Add this to your Claude Desktop config file:
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
+### Option 1: Using MCP SDK (Recommended)
 ```json
 {
   "mcpServers": {
     "polygon-market-data": {
       "command": "python",
-      "args": ["/path/to/polygon-mcp-server/polygon_server.py"],
+      "args": ["/path/to/polygon-mcp-server/server.py"],
+      "env": {
+        "POLYGON_API_KEY": "your_polygon_api_key_here"
+      }
+    }
+  }
+}
+```
+
+### Option 2: Using FastMCP
+```json
+{
+  "mcpServers": {
+    "polygon-market-data": {
+      "command": "python",
+      "args": ["/path/to/polygon-mcp-server/server_fastmcp.py"],
       "env": {
         "POLYGON_API_KEY": "your_polygon_api_key_here"
       }
@@ -86,14 +111,19 @@ get_aggregates(symbol="GOOGL", timespan="day", from_date="2024-01-01", to_date="
 
 ## Development
 
-Run the server locally:
+### Using MCP SDK Server:
 ```bash
-python polygon_server.py
+python server.py
 ```
 
-Test with FastMCP inspector:
+### Using FastMCP Server:
 ```bash
-fastmcp dev polygon_server.py
+python server_fastmcp.py
+```
+
+### Test with FastMCP Inspector:
+```bash
+fastmcp dev server_fastmcp.py
 ```
 
 ## Requirements

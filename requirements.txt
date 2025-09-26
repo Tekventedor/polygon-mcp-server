@@ -1,3 +1,7 @@
-fastmcp>=0.1.0
-aiohttp>=3.9.0
+# Core MCP dependencies
+mcp>=1.0.0
 python-dotenv>=1.0.0
+aiohttp>=3.9.0
+
+# Alternative: FastMCP (for server_fastmcp.py)
+fastmcp>=0.1.0
