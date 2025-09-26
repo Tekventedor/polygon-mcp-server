@@ -25,8 +25,8 @@ pip install -r requirements.txt
 
 3. Set up your API key:
 ```bash
-cp .env.example .env
-# Edit .env and add your Polygon API key
+# Edit .env and replace with your Polygon API key
+nano .env  # or open in any text editor
 ```
 
 Get your free API key from [Polygon.io](https://polygon.io/dashboard/api-keys)
