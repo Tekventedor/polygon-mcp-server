@@ -49,8 +49,8 @@ Both servers provide identical functionality, choose based on your preference.
 Add this to your Claude Desktop config file:
 
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-** **: '
-'
+****: `
+`
 **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ### Option 1: Using MCP SDK (Recommended)
