@@ -136,6 +136,10 @@ fastmcp dev server_fastmcp.py
 - Polygon.io API key (free tier available)
 - Dependencies listed in requirements.txt
 
+## Custom MCP Server Development
+
+We develop MCP Servers for customers, if you need MCP server for your own system similar to Polygon MCP server, please contact us (https://www.flowhunt.io/contact/). Here is the description how we develop MCP Servers for our customers: https://www.flowhunt.io/services/mcp-server-development/
+
 ## License
 
 MIT License - See LICENSE file for details
