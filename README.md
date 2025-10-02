@@ -10,6 +10,10 @@ A Model Context Protocol (MCP) server that provides real-time market data throug
 - **News Feed** - Latest news articles for any stock
 - **Historical Data** - Price aggregates for technical analysis
 
+## Demo
+
+![Polygon MCP Server Demo](polygon.gif)
+
 ## Installation
 
 1. Clone this repository:
